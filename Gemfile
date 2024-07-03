@@ -26,7 +26,11 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem "letter_opener", "~> 1.7"
+group :development do
+  gem 'letter_opener'
+  gem 'letter_opener_web'
+end
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

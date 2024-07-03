@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
 end
